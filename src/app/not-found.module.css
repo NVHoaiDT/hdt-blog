@@ -1,0 +1,9 @@
+.wrapper {
+    height: 100%;
+    padding-top: 96px;
+}
+.wrapper h1 ,
+.wrapper p {
+    display: block;    
+    text-align: center;
+}
