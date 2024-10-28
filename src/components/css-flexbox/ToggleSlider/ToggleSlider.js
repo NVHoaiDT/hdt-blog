@@ -6,14 +6,17 @@ import { motion } from "framer-motion";
 
 import styles from "./ToggleSlider.module.css";
 
-function ToggleSlider() {
-  const [shownPrimaryAxis, setShownPrimaryAxis] = React.useState(false);
+function ToggleSlider({ handleToggle }) {
+  const [isActived, setisActived] = React.useState(false);
 
-  const activeClassName = shownPrimaryAxis ? styles.active : null;
+  const activeClassName = isActived ? styles.active : null;
   return (
     <button
       className={styles.switch}
-      onClick={() => setShownPrimaryAxis(!shownPrimaryAxis)}
+      onClick={() => {
+        setisActived(!isActived);
+        handleToggle();
+      }}
     >
       <motion.div
         className={clsx(styles.slider, activeClassName)}
@@ -24,7 +27,7 @@ function ToggleSlider() {
           damping: 40,
         }}
         animate={{
-          x: shownPrimaryAxis ? "100%" : "0%",
+          x: isActived ? "100%" : "0%",
         }}
       />
     </button>

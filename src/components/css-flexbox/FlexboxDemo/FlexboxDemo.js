@@ -1,4 +1,5 @@
 //TODO: refactor CSS classname, add state to start react
+"use client";
 
 import React from "react";
 
@@ -7,21 +8,26 @@ import styles from "./FlexboxDemo.module.css";
 import ToggleSlider from "../ToggleSlider";
 
 function FlexboxDemo() {
+  const [isShownPrimaryAxis, setIsShownPrimaryAxis] = React.useState(false);
+  function handleToggle() {
+    setIsShownPrimaryAxis(!isShownPrimaryAxis);
+  }
+
   const attributes = [
     {
       label: "flex-direction:",
       values: ["row", "column"],
     },
-    // {
-    //   label: "justify-content:",
-    //   values: ["center", "space-between"],
-    // },
+    {
+      label: "justify-content:",
+      values: ["center", "space-between"],
+    },
   ];
 
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
-        <ToggleSlider />
+        <ToggleSlider handleToggle={handleToggle} />
         <p className={styles.description}>Show primary Axis</p>
       </header>
       <div className={styles.demoArea}>
@@ -29,6 +35,13 @@ function FlexboxDemo() {
         <div className={styles.flexItem}>To</div>
         <div className={styles.flexItem}>The</div>
         <div className={styles.flexItem}>World</div>
+
+        {isShownPrimaryAxis && (
+          <div className={styles.arrow}>
+            <div className={styles.line}></div>
+            <div className={styles.point}></div>
+          </div>
+        )}
       </div>
       <div className={styles.attributeSelector}>
         {attributes.map(({ label, values }) => {
