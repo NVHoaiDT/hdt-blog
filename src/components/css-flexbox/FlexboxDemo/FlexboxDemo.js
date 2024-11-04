@@ -10,12 +10,12 @@ import ToggleSlider from "../ToggleSlider";
 
 const attributes = [
   {
-    label: "flex-direction",
+    label: "flexDirection",
     values: ["row", "column"],
   },
   {
-    label: "justify-content",
-    values: ["center", "space-between"],
+    label: "justifyContent",
+    values: ["flexStart", "flexEnd", "center", "spaceBetween"],
   },
 ];
 
