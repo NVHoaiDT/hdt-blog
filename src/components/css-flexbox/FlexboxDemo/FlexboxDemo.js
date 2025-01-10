@@ -1,11 +1,11 @@
-//TODO: Fix framer-motion for flexItems & fix react class name & fix attribute select btn
-//  & fix selector label  :))))))
+//TODO: fix react class name & fix attribute select btn & fix selector label
 "use client";
 
 import React from "react";
 import { LayoutGroup, motion } from "framer-motion";
 
 import toPrimitive from "@/helpers/attribute-converter";
+import { range } from "@/utils";
 import styles from "./FlexboxDemo.module.css";
 
 import ToggleSlider from "../ToggleSlider";
@@ -49,10 +49,11 @@ function FlexboxDemo({ attributes }) {
     setIsShownPrimaryAxis(!isShownPrimaryAxis);
   }
 
+  const elementLabels = ["Hello", "To", "The", "World"];
   const CUSTOM_SPRING = {
     type: "spring",
     stiffness: 300,
-    damping: 100,
+    damping: 30,
   };
 
   return (
@@ -64,54 +65,18 @@ function FlexboxDemo({ attributes }) {
 
       <div className={styles.demoArea} style={flexAttribute}>
         <LayoutGroup>
-          <motion.div
-            className={styles.flexItem}
-            layout={true}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 30,
-            }}
-            key="test1"
-          >
-            Hello
-          </motion.div>
-          <motion.div
-            className={styles.flexItem}
-            layout={true}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 35,
-            }}
-            key="test2"
-          >
-            To
-          </motion.div>
-          <motion.div
-            className={styles.flexItem}
-            layout={true}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 40,
-            }}
-            key="test3"
-          >
-            The
-          </motion.div>
-          <motion.div
-            className={styles.flexItem}
-            layout={true}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 45,
-            }}
-            key="test4"
-          >
-            World
-          </motion.div>
+          {range(0, 4).map((index) => {
+            return (
+              <motion.div
+                className={styles.flexItem}
+                layout={true}
+                transition={CUSTOM_SPRING}
+                key={`element-${index}`}
+              >
+                {elementLabels[index]}
+              </motion.div>
+            );
+          })}
         </LayoutGroup>
         {isShownPrimaryAxis && (
           <ArrowShowPrimaryAxis
