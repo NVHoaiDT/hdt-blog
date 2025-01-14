@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+}
+
+.link {
+  list-style: none;
+}
+.link a {
+  text-decoration: none;
+  font-weight: 500;
+}

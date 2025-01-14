@@ -5,8 +5,10 @@ import clsx from "clsx";
 import { Rss, Sun, Moon, Search } from "react-feather";
 
 import { DARK_TOKENS, LIGHT_TOKENS } from "@/constants";
+import { NAV_LINKS } from "@/constants";
 
 import Logo from "@/components/Logo";
+import NavLinks from "../NavLinks";
 import VisuallyHidden from "@/components/VisuallyHidden";
 
 import styles from "./Header.module.css";
@@ -34,7 +36,7 @@ function Header({ initialTheme, className, ...delegated }) {
   return (
     <header className={clsx(styles.wrapper, className)} {...delegated}>
       <Logo />
-
+      <NavLinks links={NAV_LINKS} />
       <div className={styles.actions}>
         <button className={styles.action}>
           <Search

@@ -1,4 +1,9 @@
 export const BLOG_TITLE = "HDT Blog";
+export const NAV_LINKS = [
+  { label: "Categories", href: "/" },
+  { label: "Goodies", href: "/" },
+  { label: "About", href: "/" },
+];
 
 export const LIGHT_COLORS = {
   "--color-text": "hsl(0deg 0% 5%)",

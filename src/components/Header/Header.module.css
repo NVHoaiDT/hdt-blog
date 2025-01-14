@@ -1,7 +1,11 @@
+/* Todo: logo-navlink: 24px, action: stretch */
 .wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+
+  gap: 12px;
+
   align-items: center;
   height: var(--header-height);
   width: 100%;
@@ -15,6 +19,9 @@
   display: flex;
   gap: 16px;
   align-items: center;
+  align-self: stretch;
+
+  margin-left: auto;
 }
 .action {
   display: block;
