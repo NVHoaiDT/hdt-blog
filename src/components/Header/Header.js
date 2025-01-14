@@ -2,7 +2,7 @@
 import React from "react";
 import Cookie from "js-cookie";
 import clsx from "clsx";
-import { Rss, Sun, Moon } from "react-feather";
+import { Rss, Sun, Moon, Search } from "react-feather";
 
 import { DARK_TOKENS, LIGHT_TOKENS } from "@/constants";
 
@@ -26,9 +26,8 @@ function Header({ initialTheme, className, ...delegated }) {
 
     const root = document.documentElement;
     root.setAttribute("data-color-theme", nextTheme);
-    Object.entries(TOKENS).forEach(
-      ([key, value]) => {
-        root.style.setProperty(key, value);
+    Object.entries(TOKENS).forEach(([key, value]) => {
+      root.style.setProperty(key, value);
     });
   }
 
@@ -38,20 +37,28 @@ function Header({ initialTheme, className, ...delegated }) {
 
       <div className={styles.actions}>
         <button className={styles.action}>
-          <Rss
-            size="1.5rem"
+          <Search
+            size="1.4rem"
             style={{
               transform: "translate(2px, -2px)",
             }}
           />
           <VisuallyHidden>View RSS feed</VisuallyHidden>
         </button>
+
         <button className={styles.action} onClick={handleToggleTheme}>
-          {theme === "dark" ? 
-            <Moon size="1.5rem" /> : 
-            <Sun size="1.5rem" />
-          }
+          {theme === "dark" ? <Moon size="1.4rem" /> : <Sun size="1.4rem" />}
           <VisuallyHidden>Toggle dark / light mode</VisuallyHidden>
+        </button>
+
+        <button className={styles.action}>
+          <Rss
+            size="1.4rem"
+            style={{
+              transform: "translate(2px, -2px)",
+            }}
+          />
+          <VisuallyHidden>View RSS feed</VisuallyHidden>
         </button>
       </div>
     </header>
