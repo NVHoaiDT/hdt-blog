@@ -66,11 +66,17 @@ LIGHT_COLORS["--color-inline-code-bg"] = "hsl(45deg 74% 85%)";
 LIGHT_COLORS["--color-selection-text"] = "black";
 LIGHT_COLORS["--color-selection-background"] =
   LIGHT_COLORS["--color-decorative-700"];
+
 LIGHT_COLORS["--color-backdrop"] = LIGHT_COLORS["--color-decorative-500"];
+
 LIGHT_COLORS["--color-backdrop-highlight"] =
   LIGHT_COLORS["--color-decorative-300"];
+// LIGHT_COLORS["--color-backdrop-highlight"] = "#f8f9fa";
+
 LIGHT_COLORS["--color-page-background"] =
   LIGHT_COLORS["--color-decorative-100"];
+// LIGHT_COLORS["--color-page-background"] = "#f8f9fa";
+
 LIGHT_COLORS["--color-page-border"] = "transparent";
 LIGHT_COLORS["--color-card-background"] = LIGHT_COLORS["--color-gray-0"];
 LIGHT_COLORS["--color-card-border"] = "transparent";
