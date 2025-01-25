@@ -35,6 +35,7 @@ import ArrowShowPrimaryAxis from "../ArrowShowPrimaryAxis";
     justifyContent: "space-between",
   }
 */
+
 function FlexboxDemo({ attributes }) {
   let initialFlexAttribute = {};
   attributes.map(({ label, values }) => {
@@ -50,6 +51,7 @@ function FlexboxDemo({ attributes }) {
   }
 
   const elementLabels = ["Hello", "To", "The", "World"];
+
   const CUSTOM_SPRING = {
     type: "spring",
     stiffness: 300,
