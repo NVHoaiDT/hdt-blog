@@ -1,4 +1,4 @@
-//to do:
+// That stuff is supriseingly surprisingly striky as hell !!!
 
 "use client";
 
@@ -14,15 +14,17 @@ function VennDiagram() {
     <>
       <svg height="800" width="1000" xmlns="http://www.w3.org/2000/svg">
         <motion.circle
-          z={9999}
           r="180"
           cx="320"
           cy="300"
+          ư
           fill="#ced4da"
           fillOpacity="0.35"
-          // whileHover={{ scale: 1.1, x: -70, y: -20 }}
-          onHoverStart={() => setIsHoverLeft(true)}
-          onHoverEnd={() => setIsHoverLeft(false)}
+          onMouseEnter={() => {
+            setIsHoverLeft(true);
+            console.log("Captured Left");
+          }}
+          onMouseLeave={() => setIsHoverLeft(false)}
           animate={
             isHoverLeft && !isHoverRight
               ? {
@@ -36,15 +38,16 @@ function VennDiagram() {
           }
         />
         <motion.circle
-          z={9999}
           r="180"
           cx="520"
           cy="300"
           fill="#ced4da"
           fillOpacity="0.35"
-          // whileHover={{ scale: 1.1, x: 70, y: -20 }}
-          onHoverStart={() => setIsHoverRight(true)}
-          onHoverEnd={() => {
+          onMouseEnter={() => {
+            setIsHoverRight(true);
+            console.log("Captured Right");
+          }}
+          onMouseLeave={() => {
             setIsHoverRight(false);
           }}
           animate={
