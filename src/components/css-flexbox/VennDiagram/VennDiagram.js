@@ -17,7 +17,6 @@ function VennDiagram() {
           r="180"
           cx="320"
           cy="300"
-          ư
           fill="#ced4da"
           fillOpacity="0.35"
           onMouseEnter={() => {
