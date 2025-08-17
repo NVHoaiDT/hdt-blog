@@ -17,7 +17,41 @@
 
 ## Introduction
 
-I built this blog as a playground where a learn, sharing and re-learn in my React exploring jounery.
+I built this blog as a personal playground — a space where I can learn, share, and re-learn throughout my journey of exploring React and modern web development.
+
+Whether it’s writing about what I’ve learned, testing out new libraries, or building fun UI experiments, this blog is meant to grow alongside my skills and curiosity.
+
+## Features
+
+Not just a static, text-and-image blog. It’s designed to be highly interactive.
+
+<details open>
+<summary>Click to collapse image</summary>    
+<pre>
+<img src = "./public/docs/overview.png"><img>
+</pre>
+</details>
+
+At first glance, it looks like a pretty standard blog, but if we scroll down a bit, we come across something pretty unusual:
+
+<details open>
+<summary>Click to collapse gif</summary>    
+<pre>
+<img src = "./public/docs/division-groups-demo.gif"><img>
+</pre>
+</details>
+<details open>
+<summary>Click to collapse gif</summary>    
+<pre>
+<img src = "./public/docs/flexbox-demo.gif"><img>
+</pre>
+</details>
+
+Some highlights include:
+
+-  MDX-powered posts — write articles that seamlessly blend Markdown and React components.
+-  Custom interactive elements — from visual demos to playful UI experiments.
+-  React ecosystem — built with React, Next.js, and styled with a clean, reusable design.
 
 ## Tech Stack
 
@@ -25,9 +59,9 @@ I built this blog as a playground where a learn, sharing and re-learn in my Reac
 -  Next.js
 -  Framer Motion
 
-## Quick Start
+## Running Locally
 
-My blog is live at [NVHoaiDT](nvhoaidt.vercel.app/). For running locally, follow these steps to set up the project on your machine.
+My blog is live at [NVHoaiDT](https://nvhoaidt.vercel.app/). For running locally, follow these steps to set up the project on your machine.
 
 **Prerequisites**
 
